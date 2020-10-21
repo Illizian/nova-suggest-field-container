@@ -1,6 +1,6 @@
 {
-    "name": "illizian/nova-suggest-wrapper",
-    "description": "A Laravel Nova field.",
+    "name": "illizian/nova-suggest-field-container",
+    "description": "A Laravel Nova field container allowing Textarea's to contain typeahead suggestions",
     "keywords": [
         "laravel",
         "nova"
