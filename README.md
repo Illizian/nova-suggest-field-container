@@ -1,5 +1,8 @@
 # Laravel Nova Suggest Field
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/illizian/nova-suggest-field-container.svg)](https://packagist.org/packages/illizian/nova-suggest-field-container)
+[![License](https://img.shields.io/packagist/l/Illizian/nova-suggest-field-container.svg)](https://github.com/Illizian/nova-suggest-field-container/blob/master/LICENSE.md)
+
 ## Description
 
 A container for TextArea fields that enables typeahead auto suggestions
@@ -7,6 +10,14 @@ A container for TextArea fields that enables typeahead auto suggestions
 ### Demo
 
 ![Demo](https://raw.githubusercontent.com/Illizian/nova-suggest-field-container/main/docs/nova-suggest-field-container-demo.gif)
+
+### Installation
+
+The package can be installed through Composer.
+
+```bash
+composer require illizian/nova-suggest-field-container
+```
 
 ## Usage
 
