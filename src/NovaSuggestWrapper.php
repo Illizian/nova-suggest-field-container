@@ -31,13 +31,35 @@ class NovaSuggestWrapper extends Field
     }
 
     /**
+     * Sets the trigger character.
+     *
+     * @param  string $string
+     * @return $this
+     */
+    public function trigger($string) : Self
+    {
+        return $this->withMeta([ 'trigger' => $string ]);
+    }
+
+    /**
+     * Set a list of suggestions.
+     *
+     * @param  array $list
+     * @return $this
+     */
+    public function suggestions($list) : Self
+    {
+        return $this->withMeta([ 'suggestions' => $list ]);
+    }
+
+    /**
      * Resolve the field's value.
      *
      * @param mixed $resource
      * @param string|null $attribute
      * @return void
      */
-    public function resolve($resource, $attribute = null)
+    public function resolve($resource, $attribute = null) : void
     {
         foreach ($this->meta['fields'] as $field) {
             $field->resolve($resource, $attribute);
@@ -50,7 +72,7 @@ class NovaSuggestWrapper extends Field
      * @param NovaRequest $request
      * @return array
      */
-    public function getRules(NovaRequest $request)
+    public function getRules(NovaRequest $request) : array
     {
         $rules = parent::getRules($request);
 
@@ -66,9 +88,9 @@ class NovaSuggestWrapper extends Field
      *
      * @param NovaRequest $request
      * @param Model $model
-     * @return mixed
+     * @return void
      */
-    public function fill(NovaRequest $request, $model)
+    public function fill(NovaRequest $request, $model) : void
     {
         foreach ($this->meta['fields'] as $field) {
             $field->fill($request, $model);
@@ -80,7 +102,7 @@ class NovaSuggestWrapper extends Field
      *
      * @return array
      */
-    public function jsonSerialize()
+    public function jsonSerialize() : array
     {
         return array_merge([ 'fields' => $this->meta['fields'] ], parent::jsonSerialize());
     }
