@@ -16,7 +16,7 @@
                     :via-resource="viaResource"
                     :via-resource-id="viaResourceId"
                     :via-relationship="viaRelationship"
-                    show-help-text="true"
+                    :show-help-text="showHelpText"
                 />
             </at-ta>
         </div>
